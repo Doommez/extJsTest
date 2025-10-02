@@ -1,0 +1,40 @@
+  "plugins"
+    :
+    [
+      "@sencha/extjs"
+    ],
+    "extends"
+    :
+    [
+      // this rule is in the recommended configuration list
+        // so including this line enables this rule
+      "plugin:@sencha/extjs/recommended"
+    ],
+    "settings"
+    :
+    {
+      "extjs"
+      :
+      {
+        "toolkit"
+        :
+        "classic",
+        "fromVersion"
+        :
+        4,
+        "toVersion"
+        :
+        'latest'
+      }
+    }
+    ,
+    "rules"
+    :
+    {
+      // optionally, you can specify the rule explicitly
+      // and the errorlevel and any options set here
+      // will override any defaults from the 'extends' section
+      "@sencha/extjs/no-existing-alias-override"
+      :
+      "warn"
+    }
