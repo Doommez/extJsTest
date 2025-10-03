@@ -9,9 +9,11 @@ Ext.define('MyExtGenApp.view.test.MainView', {
     items: [
         {
             docked: 'top',
-            xtype: 'panel',
-            height: 60,
-            html: '<h2>Заголовок / Header</h2>'
+            xtype: 'titlebar',
+            title: 'Header',
+            items: [{
+                html: '<div>head action</div>'
+            }]
         },
         {
            xtype:'container',
@@ -19,10 +21,11 @@ Ext.define('MyExtGenApp.view.test.MainView', {
             flex: 1,
             items: [
                 {
-                    xtype: 'navview',
+                    xtype: 'tnavview',
                 },
                 {
                     xtype: 'panel',
+                    floating: true,
                     html: '<div>asdfasdf</div>'
                 }
             ]

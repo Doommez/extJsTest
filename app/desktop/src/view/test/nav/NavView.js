@@ -1,16 +1,18 @@
 Ext.define('MyExtGenApp.view.test.nav.NavView', {
     extend: 'Ext.NavigationView',
-    xtype: 'navview',
+    xtype: 'tnavview',
     requires: ['Ext.navigation.Bar'],
-    height: '100%',
     defaultBackButtonText: 'Back',
     items: [{
-        xtype: 'button',
-        text: 'Главная',
-        handler: 'onHome'
-    },{
-        xtype: 'button',
-        text: 'Настройки',
-        handler: 'onSettings'
+        xtype: 'container',
+        reference: 'contentPanel',
+        itemId: 'content',
+        items: [{
+            xtype: 'button',
+            html: 'Главная страница'
+        },{
+            xtype: 'button',
+            html: 'Настройки'
+        }]
     }]
 })
