@@ -1,18 +1,18 @@
 Ext.define('MyExtGenApp.view.test.nav.NavView', {
-    extend: 'Ext.NavigationView',
+    extend: 'Ext.Panel',
     xtype: 'tnavview',
-    requires: ['Ext.navigation.Bar'],
-    defaultBackButtonText: 'Back',
-    items: [{
-        xtype: 'container',
-        reference: 'contentPanel',
-        itemId: 'content',
-        items: [{
+    collapsed: false,
+    collapsible: true,
+    ui: 'light',
+    width: 200,
+
+    headerPosition: 'left',
+
+    items: [
+        {
             xtype: 'button',
-            html: 'Главная страница'
-        },{
-            xtype: 'button',
-            html: 'Настройки'
-        }]
-    }]
+            text: 'Главная страница' },
+        {   xtype: 'button',
+            text: 'Настройки' }
+    ]
 })

@@ -59,7 +59,7 @@
       "shared": "resources"
     }
   },
-  
+
   "fashion": {
    "missingParameters": "error",
     "inliner": {"enable": false}

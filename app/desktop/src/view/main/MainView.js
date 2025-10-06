@@ -15,5 +15,9 @@ Ext.define('MyExtGenApp.view.main.MainView', {
         { xtype: 'footerview', reference: 'footerview', docked: 'bottom', bind: {height: '{footerview_height}'} },
         { xtype: 'centerview', reference: 'centerview' },
         { xtype: 'detailview', reference: 'detailview', docked: 'right',  bind: {width:  '{detailview_width}'}  },
-    ]
+    ],
+    initialize: function () {
+        this.callParent(arguments);
+        console.log('MainView initialized (Modern)');
+    }
 });
