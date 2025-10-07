@@ -9,6 +9,7 @@ Ext.define('MyExtGenApp.view.main.MainViewController', {
 	},
 
 	mainRoute:function(xtype) {
+		console.log(xtype);
 		//var menuview = this.lookup('menuview');
 		var navview = this.lookup('navview');
 		console.log('navview',navview)

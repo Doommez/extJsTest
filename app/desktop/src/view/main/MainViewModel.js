@@ -32,7 +32,7 @@ Ext.define('MyExtGenApp.view.main.MainViewModel', {
 				"children": [
           { "text": "Home", "iconCls": "x-fa fa-home", "xtype": "homeview", "leaf": true },
 					{ "text": "Personnel", "iconCls": "x-fa fa-table", "xtype": "personnelview","leaf": true },
-					{ "text": "TestTab", "iconCls": "x-fa fa-user", "xtype": "testview","leaf": true },
+					{ "text": "tmainview", "iconCls": "x-fa fa-user", "xtype": "tmainview","leaf": true },
 					//add new items on the next line (from sencha-node generate viewpackage)
 
 				]
