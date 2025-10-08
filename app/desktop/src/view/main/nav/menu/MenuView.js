@@ -7,9 +7,9 @@ Ext.define('MyExtGenApp.view.nav.menu.MenuView', {
         'Ext.data.TreeStore',
     ],
     scrollable: true,
-    bind: { 
-        store: '{menu}', 
-        micro: '{navCollapsed}' 
+    bind: {
+        store: '{menu}',
+        micro: '{navCollapsed}'
     },
     expanderFirst: false,
     expanderOnly: false

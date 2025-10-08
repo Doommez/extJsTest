@@ -10,18 +10,12 @@ Ext.define('MyExtGenApp.view.test.MainView', {
     },
     items: [
         {
-            xtype: 'panel',
-            docked: 'top',
-            iconCls: 'x-fa fa-rocket',
-            title: 'Мое первое приложение на Ext Js',
-        },
-        {
             xtype: 'tnavview',
             docked: 'left',
         },
         {
             xtype: 'panel',
-            title: 'mainview',
+            title: 'tmainview',
         },
         {
             xtype: 'panel',
