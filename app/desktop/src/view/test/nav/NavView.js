@@ -1,12 +1,12 @@
 Ext.define('MyExtGenApp.view.test.nav.NavView', {
     extend: 'Ext.Panel',
+    requires: [
+        'Ext.panel.Collapser'
+    ],
     xtype: 'tnavview',
     viewModel: 'navviewmodel',
     controller: 'tnavviewcontroller',
     title: 'Навигация',
-    requires: [
-        'Ext.panel.Collapser'
-    ],
     hidden: false,
     bind: {
         width: '{width}',
@@ -17,6 +17,7 @@ Ext.define('MyExtGenApp.view.test.nav.NavView', {
         iconCls: 'x-fa fa-bars',
         handler: 'onChangeSize'
     },],
+    cls: 'classs',
     items: [
         {
             xtype: 'tnavmenuview',

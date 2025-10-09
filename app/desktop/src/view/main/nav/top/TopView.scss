@@ -1,13 +1,13 @@
-.topview { 
-	border-left: 0; 
-	border-top: 0; 
+.topview {
+	border-left: 0;
+	border-top: 0;
 	padding: 0 0 0 0;
-	color: $base-foreground-color; 
+	color: $base-foreground-color;
 	background-color: darken($base-color, 20%);
 }
 
-.topviewtext { 
-	font-size: 28px; 
+.topviewtext {
+	font-size: 28px;
 	padding: 0 0 0 15px;
 	line-height: 50px;
 }

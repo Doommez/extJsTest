@@ -5,8 +5,9 @@ Ext.define('MyExtGenApp.view.test.nav.menu.NavMenu',{
     reference: 'tnavmenuview',
     viewModel: {},
     ui: 'nav',
-    cls: 'rrrrrrrrrrr',
     height: '100%',
+    padding: 3,
+    cls: 'rrrrrrrrrrr',
     expanderFirst: false,
     bind: {
         store: '{navmenu}',
