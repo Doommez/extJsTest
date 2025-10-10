@@ -21,6 +21,9 @@ Ext.define('MyExtGenApp.view.test.nav.NavView', {
     items: [
         {
             xtype: 'tnavmenuview',
+            listeners: {
+                selectionchange: 'onChangeMenu'
+            }
         }
     ]
 })

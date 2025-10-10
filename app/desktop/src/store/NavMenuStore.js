@@ -12,44 +12,38 @@ Ext.define('MyExtGenApp.store.NavMenuStore', {
             iconCls: 'x-fa fa-home',
             children: [{
                 text: 'Messages',
+                url: 'message',
                 iconCls: 'x-fa fa-inbox',
                 leaf: true
             }, {
-                text: 'Archive',
-                iconCls: 'x-fa fa-database',
-                children: [{
-                    text: 'First',
-                    iconCls: 'x-fa fa-sliders-h',
-                    leaf: true
-                }, {
-                    text: 'No Icon',
-                    iconCls: null,
-                    leaf: true
-                }]
-            }, {
                 text: 'Music',
                 iconCls: 'x-fa fa-music',
+                url: '/music',
                 leaf: true
             }, {
                 text: 'Video',
                 iconCls: 'x-fa fa-film',
+                url: '/video',
                 leaf: true
             }]
         }, {
             text: 'Users',
             iconCls: 'x-fa fa-user',
             children: [{
-                text: 'Tagged',
+                text: 'Profile',
+                url: '/profile',
                 iconCls: 'x-fa fa-tag',
                 leaf: true
             }, {
-                text: 'Inactive',
+                text: 'users',
+                url: '/users',
                 iconCls: 'x-fa fa-trash-alt',
                 leaf: true
             }]
         }, {
             text: 'Groups',
             iconCls: 'x-fa fa-users',
+            url: '/groups',
             leaf: true
         }, {
             text: 'Settings',
@@ -57,15 +51,18 @@ Ext.define('MyExtGenApp.store.NavMenuStore', {
             children: [{
                 text: 'Sharing',
                 iconCls: 'x-fa fa-share-alt',
-                leaf: true
+                leaf: true,
+                url: '/sharing',
             }, {
                 text: 'Notifications',
                 iconCls: 'x-fa fa-flag',
-                leaf: true
+                leaf: true,
+                url: '/notifications',
             }, {
                 text: 'Network',
                 iconCls: 'x-fa fa-signal',
-                leaf: true
+                leaf: true,
+                url: '/network',
             }]
         }]
     }
