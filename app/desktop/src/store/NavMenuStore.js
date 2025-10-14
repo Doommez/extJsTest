@@ -18,12 +18,12 @@ Ext.define('MyExtGenApp.store.NavMenuStore', {
             }, {
                 text: 'Music',
                 iconCls: 'x-fa fa-music',
-                url: '/music',
+                url: 'music',
                 leaf: true
             }, {
                 text: 'Video',
                 iconCls: 'x-fa fa-film',
-                url: '/video',
+                url: 'video',
                 leaf: true
             }]
         }, {
@@ -31,19 +31,19 @@ Ext.define('MyExtGenApp.store.NavMenuStore', {
             iconCls: 'x-fa fa-user',
             children: [{
                 text: 'Profile',
-                url: '/profile',
+                url: 'profile',
                 iconCls: 'x-fa fa-tag',
                 leaf: true
             }, {
                 text: 'users',
-                url: '/users',
+                url: 'users',
                 iconCls: 'x-fa fa-trash-alt',
                 leaf: true
             }]
         }, {
             text: 'Groups',
             iconCls: 'x-fa fa-users',
-            url: '/groups',
+            url: 'groups',
             leaf: true
         }, {
             text: 'Settings',

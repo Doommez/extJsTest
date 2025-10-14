@@ -3,21 +3,12 @@ Ext.define('MyExtGenApp.view.test.nav.NavViewController', {
     alias: 'controller.tnavviewcontroller',
 
 
-    routes:{
-      '*': 'onChangeRoute',
-    },
-    defaultToken : 'message',
-
    onChangeSize: function (panel, tools, event) {
         const vm = panel.getViewModel()
         vm.set('micro', !vm.get('micro'));
         vm.set('width', vm.get('width') === 300 ? 50: 300);
         panel.setWidth(panel.width=== 300 ? 50: 300);
    },
-
-    onChangeRoute: function (route) {
-
-    },
 
     onChangeMenu: function (menu, record) {
         const isLeaf = record.data.leaf;
@@ -43,7 +34,4 @@ Ext.define('MyExtGenApp.view.test.nav.NavViewController', {
         menu.setSelection(record.data.id)
     },
 
-    measureWidth: function(treelist) {
-        return treelist.toolsElement.getWidth();
-    }
 });

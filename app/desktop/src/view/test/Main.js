@@ -2,7 +2,9 @@ Ext.define('MyExtGenApp.view.test.MainView', {
     extend: 'Ext.Container',
     xtype: 'tmainview',
     fullscreen: true,
+    controller: 'tmaincontroller',
     layout: 'fit',
+    routeId: 'main',
     initialize: function (...args) {
         console.log('asdf', args)
         let app =  MyExtGenApp
@@ -14,8 +16,7 @@ Ext.define('MyExtGenApp.view.test.MainView', {
             docked: 'left',
         },
         {
-            xtype: 'panel',
-            title: 'tmainview',
+            xtype: 'tcenterview',
         },
         {
             xtype: 'panel',

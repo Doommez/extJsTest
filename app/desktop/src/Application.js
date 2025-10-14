@@ -2,7 +2,7 @@ Ext.define('MyExtGenApp.Application', {
 	extend: 'Ext.app.Application',
 	name: 'MyExtGenApp',
 	requires: ['MyExtGenApp.*'],
-	defaultToken: ['homeview',],
+	defaultToken: 'message',
 
 	removeSplash: function () {
 		Ext.getBody().removeCls('launching')
@@ -14,6 +14,7 @@ Ext.define('MyExtGenApp.Application', {
 		this.removeSplash()
 		var whichView = 'tmainview'
 		Ext.Viewport.add([{xtype: whichView}])
+
 	},
 
 	onAppUpdate: function () {
