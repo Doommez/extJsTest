@@ -3,35 +3,46 @@ Ext.define('MyExtGenApp.view.test.nav.NavViewController', {
     alias: 'controller.tnavviewcontroller',
 
 
-   onChangeSize: function (panel, tools, event) {
+    onChangeSize: function (panel, tools, event) {
         const vm = panel.getViewModel()
         vm.set('micro', !vm.get('micro'));
-        vm.set('width', vm.get('width') === 300 ? 50: 300);
-        panel.setWidth(panel.width=== 300 ? 50: 300);
-   },
+        vm.set('width', vm.get('width') === 300 ? 50 : 300);
+        panel.setWidth(panel.width === 300 ? 50 : 300);
+    },
 
     onChangeMenu: function (menu, record) {
+        console.log(menu);
         const isLeaf = record.data.leaf;
-        if(!isLeaf){
+        if (!isLeaf) {
             const firstItem = record.childNodes[0]
-            this.goTo(menu, firstItem);
-        }else{
-            this.goTo(menu,record)
+            this._goTo(menu, firstItem);
+        } else {
+            this._goTo(menu, record)
         }
     },
 
-    goTo: function (menu,record) {
+    _goTo: function (menu, record) {
         const url = record.data.url;
         const isLeaf = record.data.leaf;
 
-        if(url&& isLeaf){
+        if (url && isLeaf) {
             this.redirectTo(url)
-            this.setActiveMenuItem(menu,record)
+            this.setActiveMenuItem(record)
         }
     },
 
-    setActiveMenuItem: function (menu, record) {
-        menu.setSelection(record.data.id)
+    setActiveMenuItem: function (record) {
+        const menu = this.getView().down('tnavmenuview')
+        console.log(menu,'menu', menu.isPainted())
+        const activeMenuItemId = menu.getSelection()
+        if (activeMenuItemId?.id !== record.id) {
+            console.log(record, 'record', menu)
+            menu.setSelection(record)
+        }
+        menu.on('painted', () => {
+            console.log('painted')
+            menu.setSelection(record);
+        });
     },
 
 });
