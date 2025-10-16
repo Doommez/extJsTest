@@ -33,16 +33,24 @@ Ext.define('MyExtGenApp.view.test.nav.NavViewController', {
 
     setActiveMenuItem: function (record) {
         const menu = this.getView().down('tnavmenuview')
-        console.log(menu,'menu', menu.isPainted())
+        console.log(menu, 'menu', menu.isPainted())
         const activeMenuItemId = menu.getSelection()
-        if (activeMenuItemId?.id !== record.id) {
-            console.log(record, 'record', menu)
-            menu.setSelection(record)
+
+        const store = menu.getStore()
+        if(store){
+            if (activeMenuItemId && activeMenuItemId.id !== record.id) {
+                console.log(record, 'record', menu)
+                menu.setSelection(record)
+            }
+        } else{
+
         }
-        menu.on('painted', () => {
-            console.log('painted')
-            menu.setSelection(record);
-        });
+
     },
+
+
+    onRerenderMenu:function (...args){
+        console.log('nav rerenderMenu', args)
+    }
 
 });

@@ -7,10 +7,9 @@ Ext.define('MyExtGenApp.view.test.nav.menu.NavMenu',{
     ui: 'nav',
     height: '100%',
     padding: 3,
-    cls: 'rrrrrrrrrrr',
     expanderFirst: false,
     bind: {
         store: '{navmenu}',
         micro: '{micro}'
-    }
+    },
 })

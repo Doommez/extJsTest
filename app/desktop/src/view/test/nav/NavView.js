@@ -22,7 +22,10 @@ Ext.define('MyExtGenApp.view.test.nav.NavView', {
         {
             xtype: 'tnavmenuview',
             listeners: {
-                selectionchange: 'onChangeMenu'
+                selectionchange: 'onChangeMenu',
+                afterRender: 'onRerenderMenu',
+                // painted: 'onRerenderMenu',
+                render: 'onRerenderMenu',
             }
         }
     ]
