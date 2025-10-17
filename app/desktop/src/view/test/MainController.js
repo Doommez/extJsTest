@@ -32,6 +32,8 @@ Ext.define('MyExtGenApp.view.test.MainController', {
 
     onChangeRoute: function (...arg) {
         console.log(arg, 'onChangeRoute')
+        const auth = MyExtGenApp.util.Auth;
+        console.log(auth, auth.getToken())
         const newUrl = new URL(window.location.href)
         const hash = newUrl.hash
         const menuItemUrl = hash.split('/')[0].substring(1)

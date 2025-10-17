@@ -1,9 +1,17 @@
 Ext.define('MyExtGenApp.view.test.center.CenterView', {
-    extend: 'Ext.Container',
-    title: 'MyExtGenApp.view.test.center.CenterView',
+    extend: 'Ext.Panel',
+    title: 'ExtJS',
     xtype: 'tcenterview',
     reference: 'centerview',
     layout: 'card',
+    tools: [{
+        xtype: 'button',
+        ui: 'action',
+        text: 'Выйти',
+        handler: function() {
+            console.log('handler')
+        }
+    }, ],
     items: [
         {
           xtype: 'panel',
