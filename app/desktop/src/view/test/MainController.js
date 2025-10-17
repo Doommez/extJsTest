@@ -21,8 +21,6 @@ Ext.define('MyExtGenApp.view.test.MainController', {
         const vm = nav.getViewModel()
         const store = vm.getStore('navmenu')
         const record = store.findNode('url', url)
-        const id = record.data.id
-        console.log(id)
         navController.setActiveMenuItem(record)
     },
 

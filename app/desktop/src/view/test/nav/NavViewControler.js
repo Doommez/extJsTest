@@ -11,7 +11,6 @@ Ext.define('MyExtGenApp.view.test.nav.NavViewController', {
     },
 
     onChangeMenu: function (menu, record) {
-        console.log(menu);
         const isLeaf = record.data.leaf;
         if (!isLeaf) {
             const firstItem = record.childNodes[0]
@@ -33,23 +32,24 @@ Ext.define('MyExtGenApp.view.test.nav.NavViewController', {
 
     setActiveMenuItem: function (record) {
         const menu = this.getView().down('tnavmenuview')
-        console.log(menu, 'menu', menu.isPainted())
         const activeMenuItemId = menu.getSelection()
-
-        const store = menu.getStore()
-        if(store){
+        const store = menu.getStore('navmenu')
+        if (store) {
             if (activeMenuItemId && activeMenuItemId.id !== record.id) {
-                console.log(record, 'record', menu)
                 menu.setSelection(record)
             }
-        } else{
-
+        } else {
+            menu.on('painted', () => {
+                menu.setSelection(record)
+            }, {
+                single: true,
+            })
         }
 
     },
 
 
-    onRerenderMenu:function (...args){
+    onRerenderMenu: function (...args) {
         console.log('nav rerenderMenu', args)
     }
 
