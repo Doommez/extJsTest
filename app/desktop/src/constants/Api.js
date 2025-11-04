@@ -1,7 +1,11 @@
 Ext.define('MyExtGenApp.constants.Api',{
     singleton: true,
     alternateClassName: 'API',
-    static: {
-        BASE_URL: 'localhost:4000'
-    }
+    BASE_URL: 'http://localhost:4000',
+    API: {
+        LOGIN: '/auth/login',
+        LOGOUT: '/auth/logout',
+        USERS: '/users',
+        POSTS: '/posts',
+    },
 })

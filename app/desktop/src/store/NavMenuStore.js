@@ -11,7 +11,7 @@ Ext.define('MyExtGenApp.store.NavMenuStore', {
             text: 'Home',
             iconCls: 'x-fa fa-home',
             children: [{
-                text: Ext.API.BASE_URL,
+                text: 'message',
                 url: 'message',
                 iconCls: 'x-fa fa-inbox',
                 leaf: true

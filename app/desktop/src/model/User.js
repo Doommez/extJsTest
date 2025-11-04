@@ -8,7 +8,7 @@ Ext.define('MyExtGenApp.model.User', {
         { name: 'hash', type: 'string' }, // JWT токен, получаемый при логине
         {name: 'createdAt', type: 'date' },
         {name: 'updatedAt', type: 'date' },
-        {name: 'roles', type: 'array' },
+        {name: 'roles', type: 'auto' },
     ],
 
     proxy: {
