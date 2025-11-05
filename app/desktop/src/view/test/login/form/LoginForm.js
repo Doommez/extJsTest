@@ -19,12 +19,15 @@ Ext.define('MyExtGenApp.view.test.login.form.LoginForm', {
         allowBlank: false,
         required: true,
         label: 'Пароль',
-        name: 'pass',
+        name: 'password',
         placeholder: 'пароль'
     }, ],
 
     buttons: [{
         text: 'Войти',
         handler: 'onLogin'
+    }, {
+        text: 'users',
+        handler: 'getUsers'
     }]
 })
