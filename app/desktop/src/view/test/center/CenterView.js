@@ -9,7 +9,7 @@ Ext.define('MyExtGenApp.view.test.center.CenterView', {
         ui: 'action',
         text: 'Выйти',
         handler: function() {
-            console.log('handler')
+          MyExtGenApp.service.AuthService.logout()
         }
     }, ],
     items: [

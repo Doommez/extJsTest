@@ -30,16 +30,16 @@ Ext.define('MyExtGenApp.store.NavMenuStore', {
             text: 'Users',
             iconCls: 'x-fa fa-user',
             children: [{
+                text: 'users',
+                url: 'users',
+                iconCls: 'x-fa fa-user',
+                leaf: true
+            }, {
                 text: 'Profile',
                 url: 'profile',
                 iconCls: 'x-fa fa-tag',
                 leaf: true
-            }, {
-                text: 'users',
-                url: 'users',
-                iconCls: 'x-fa fa-trash-alt',
-                leaf: true
-            }]
+            },]
         }, {
             text: 'Groups',
             iconCls: 'x-fa fa-users',

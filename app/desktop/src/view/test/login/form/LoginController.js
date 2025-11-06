@@ -12,5 +12,16 @@ Ext.define('MyExtGenApp.view.test.login.form.LoginController', {
         const values = form.getValues();
         console.log(values);
         MyExtGenApp.service.AuthService.login(values);
+    },
+
+    getUsers: function () {
+        console.log(Ext.Ajax, '1341234123412')
+        Ext.Ajax.request({
+            url: MyExtGenApp.constants.Api.BASE_URL+'/users/all',
+            method: 'GET',
+            success: function (res) {
+                console.log(res)
+            }
+        })
     }
 }, )

@@ -3,6 +3,9 @@ Ext.define('MyExtGenApp.Application', {
 	name: 'MyExtGenApp',
 	requires: ['MyExtGenApp.*'],
 	defaultToken: 'message',
+	controllers: [
+		'NavigationController'
+	],
 
 	removeSplash: function () {
 		Ext.getBody().removeCls('launching')
@@ -11,6 +14,10 @@ Ext.define('MyExtGenApp.Application', {
 	},
 
 	launch: function () {
+		//settings ajax
+		Ext.Ajax.setWithCredentials(true);
+		MyExtGenApp.service.AuthService.setupInterceptors()
+
 		this.removeSplash()
 		var whichView = 'tmainview'
 		Ext.Viewport.add([{xtype: whichView}])
