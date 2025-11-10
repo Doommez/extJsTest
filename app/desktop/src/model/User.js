@@ -11,6 +11,22 @@ Ext.define('MyExtGenApp.model.User', {
         {name: 'roles', type: 'auto' },
     ],
 
+    validators: {
+        name: [
+            { type: 'presence', message: 'Имя обязательно' },
+            { type: 'length', min: 2, max: 50 }
+        ],
+        login: [
+            { type: 'presence', message: 'Login обязателен' },
+            { type: 'length', min: 2, max: 50 }
+        ],
+        role: {
+            type: 'inclusion',
+            list: ['admin', 'manager', 'user'],
+            message: 'Некорректная роль'
+        }
+    },
+
     proxy: {
         type: 'rest',
         url: `/api/users`, // например /api/users/1
